@@ -27,13 +27,14 @@ public class FetchProperties {
 			prop.load(input);
 
 			// get the property value and print it out
-			System.out.println(prop.getProperty("wikiLink"));
+			/*System.out.println(prop.getProperty("wikiLink"));
 			System.out.println(prop.getProperty("wikiUserName"));
-			System.out.println(prop.getProperty("wikiPassword"));
+			System.out.println(prop.getProperty("wikiPassword"));*/
 			
 			System.setProperty("wikiLink", prop.getProperty("wikiLink"));
 			System.setProperty("wikiUserName", prop.getProperty("wikiUserName"));
 			System.setProperty("wikiPassword", prop.getProperty("wikiPassword"));
+			System.setProperty("deRulesXML", prop.getProperty("deRulesXML"));
 
 		} catch (IOException ex) {
 			ex.printStackTrace();

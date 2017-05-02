@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<page>
+    <page-name>AssignmentEntry</page-name>
+    <fields>
+        <field>
+            <field-name>Seller</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Contact/Adjuster</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:seller is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Reference Number/Claim Number</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>VAT Section</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Date of Loss</field-name>
+            <condition>lot:seller:slr_type='I'</condition>
+            <requiredCondition>lot:seller:slr_type='I'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Date Claim Reported</field-name>
+            <condition>lot:seller:slr_type='I'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Settlement Model</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Is the Owner a Company</field-name>
+            <condition>lot:seller:slr_type='I'</condition>
+            <requiredCondition>lot:seller:slr_type='I'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Owner</field-name>
+            <condition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=true)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=true)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Owner's VAT ID / Fiscal ID</field-name>
+            <condition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Email (Related to Owner)</field-name>
+            <condition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>First Name (Related to Owner)</field-name>
+            <condition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Last Name (Related to Owner)</field-name>
+            <condition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Contact Info (Related to Owner)</field-name>
+            <condition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Address (Related to Owner)</field-name>
+            <condition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (owner:is_cmp_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Is Insured Same As Owner</field-name>
+            <condition>lot:seller:slr_type='I'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Is Insured a Company?</field-name>
+            <condition>lot:seller:slr_type='I'</condition>
+            <requiredCondition>lot:seller:slr_type='I'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Email (Related to Insured)</field-name>
+            <condition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=false)</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>First Name (Related to Insured)</field-name>
+            <condition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=false)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Last Name (Related to Insured)</field-name>
+            <condition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=false)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Insured Company Name</field-name>
+            <condition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=true)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=true)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Contact Info (Related to Insured)</field-name>
+            <condition>(lot:seller:slr_type='I') and ((insured:is_cmp_flg=true) or (insured:is_cmp_flg=false))</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and ((insured:is_cmp_flg=true) or (insured:is_cmp_flg=false))</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Insured Value Added Tax ID</field-name>
+            <condition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=true)</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and (insured:is_cmp_flg=true)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Address (Related to Insured)</field-name>
+            <condition>(lot:seller:slr_type='I') and ((insured:is_cmp_flg=true) or (insured:is_cmp_flg=false))</condition>
+            <requiredCondition>(lot:seller:slr_type='I') and ((insured:is_cmp_flg=true) or (insured:is_cmp_flg=false))</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Item Type</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Registration Number</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>First Registration Date</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc != 'Homeowners'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Year of Manufacture</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>lot Vehicle Identification Number</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc != 'Homeowners'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Model Year</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc != 'Homeowners'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Make</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:lot_type is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Model</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:make is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Trim</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:model is present</readableCondition>
+        </field>
+        <field>
+            <field-name>License Plate Number</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Odometer</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>(lot:lot_type:lot_type_group_desc != 'Homeowners') and (lot:inv_info_rdbl_flg=true)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Odometer UOM</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Color</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc != 'Homeowners'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Seats</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Body Style</field-name>
+            <condition>lot:lot_type:lot_type_group_desc = 'Vehicles'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Engine Output</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Engine Output UOM</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Engine Type</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Cylinders</field-name>
+            <condition>lot:lot_type:lot_type_group_desc = 'Vehicles'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Engine Displacement</field-name>
+            <condition>((lot:lot_type:lot_type_group_desc = 'Vehicles') or (lot:lot_type:lot_type_cd = 'K') or (lot:lot_type:lot_type_cd = 'U')) and (lot:lot_type:lot_type_group_desc != 'Homeowners')</condition>
+            <requiredCondition>((lot:lot_type:lot_type_group_desc = 'Vehicles') or (lot:lot_type:lot_type_cd = 'K') or (lot:lot_type:lot_type_cd = 'U')) and (lot:lot_type:lot_type_group_desc != 'Homeowners')</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Engine Displacement UOM</field-name>
+            <condition>((lot:lot_type:lot_type_group_desc = 'Vehicles') or (lot:lot_type:lot_type_cd = 'K') or (lot:lot_type:lot_type_cd = 'U')) and (lot:lot_type:lot_type_group_desc != 'Homeowners')</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Transmission</field-name>
+            <condition>lot:lot_type:lot_type_group_desc = 'Vehicles'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Drive</field-name>
+            <condition>lot:lot_type:lot_type_group_desc = 'Vehicles'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Fuel</field-name>
+            <condition>lot:lot_type:lot_type_group_desc = 'Vehicles'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>CO2 Emission</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>CO2 Emission Unit</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Item description</field-name>
+            <condition>lot:lot_type:lot_type_group_desc = 'Homeowners'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc = 'Homeowners'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Gross Weight</field-name>
+            <condition>(lot:lot_type:lot_type_group_desc = 'Marine') or (lot:lot_type:lot_type_group_desc = 'Recreational/Industrial') or(lot:lot_type:lot_type_group_desc = 'Homeowners') or(lot:lot_type:lot_type_group_desc = 'Vehicles')</condition>
+            <requiredCondition>(lot:lot_type:lot_type_group_desc = 'Marine') or (lot:lot_type:lot_type_group_desc = 'Recreational/Industrial') or(lot:lot_type:lot_type_group_desc = 'Homeowners') or(lot:lot_type:lot_type_group_desc = 'Vehicles')</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Length</field-name>
+            <condition>(lot:lot_type:lot_type_group_desc = 'Marine') or (lot:lot_type:lot_type_group_desc = 'Recreational/Industrial')</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Length UOM</field-name>
+            <condition>(lot:lot_type:lot_type_group_desc = 'Marine') or (lot:lot_type:lot_type_group_desc = 'Recreational/Industrial')</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Gross Weight UOM</field-name>
+            <condition>(lot:lot_type:lot_type_group_desc = 'Marine') or (lot:lot_type:lot_type_group_desc = 'Recreational/Industrial') or (lot:lot_type:lot_type_group_desc = 'Homeowners')</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Type of Loss</field-name>
+            <condition>lot:seller:slr_type='I'</condition>
+            <requiredCondition>lot:seller:slr_type='I'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Estimated Cost of Repair</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Purchase Price</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Residual Value</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Item Value / Pre Accident Value</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Euronorm</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Bid To Be Approved?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Reserve</field-name>
+            <condition>lot:btba_type:btba_type_cd = 'X'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Buy It Now</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Keys</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Towable</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax Eligible?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Pick Up Required?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Residence?</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd='Y'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Location</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=true)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=true)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Location Name ( Related to Residence)</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Phone</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Alt. Phone</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Email</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Address (Line 1)</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Address (Line 2)</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Tax Id</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Country</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>City</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>State</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</requiredCondition>
+            <readableCondition>lot_site:cntry_cd is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Zip</field-name>
+            <condition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</condition>
+            <requiredCondition>(lot:pickup_value:pkup_cd='Y') and (lot_site:is_commercial_flg=false)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Promised Trip Date</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Special Transport Instructions</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Which location Manages This Lot?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Ok to pay charges?</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd='Y'</requiredCondition>
+            <readableCondition>lot_site:is_commercial_flg = No</readableCondition>
+        </field>
+        <field>
+            <field-name>Who is responsible for Advanced Charges?</field-name>
+            <condition>(lot:ok_pay_chrg_flg=true) and (lot:seller:slr_type='I')</condition>
+            <requiredCondition>(lot:ok_pay_chrg_flg=true) and (lot:seller:slr_type='I')</requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true and lot:seller:slr_type='I'</readableCondition>
+        </field>
+        <field>
+            <field-name>Advance Charges Paid?</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition>lot:ok_pay_chrg_flg=true</requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Towing</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax (Related to Towing)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>advance_charge:towing is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Labor</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax ( Related to Labor)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>advance_charge:labor is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Invoice Comments (required for Labor)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition>(lot:ok_pay_chrg_flg=true) and (advance_charge:labor &gt; 0)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>location Gate</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax (Related to location Gate)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>advance_charge:yard_gate is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Tear Down Estimate</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax (Related to Tear Down Estimate)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>advance_charge:tear_down_estmt_vat is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Flat or Daily Storage?</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Storage Amount</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax (Related to Storage)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>advance_charge:strg_amt is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Storage From Date</field-name>
+            <condition>(lot:ok_pay_chrg_flg=true) and (advance_charge:strg_daily_flg=true)</condition>
+            <requiredCondition>(lot:ok_pay_chrg_flg=true) and (advance_charge:strg_daily_flg=true)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Storage Thru Date</field-name>
+            <condition>(lot:ok_pay_chrg_flg=true) and (advance_charge:strg_daily_flg=true)</condition>
+            <requiredCondition>(advance_charge:strg_daily_flg=true) and (advance_charge:strg_from_date is present)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Other Advance Charges</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>lot:ok_pay_chrg_flg is true</readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax (Related to Other Advance Charges)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>advance_charge:add_fee is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Invoice Comments (required for Other Advance Charges)</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition>(lot:ok_pay_chrg_flg=true) and (advance_charge:add_fee &gt; 0)</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Tax</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Total Charges</field-name>
+            <condition>lot:ok_pay_chrg_flg=true</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Fee Type (related to service order)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Approved</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Status</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Amount</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Priority</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Contact</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Service Order Notes</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Lot Notes</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Invoice Comments</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Service Order Instructions</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Assignment Entered Date</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Follow Up Date (related to Pickup Hold)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Hold Reason (related to Pickup Hold)</field-name>
+            <condition></condition>
+            <requiredCondition>lot:hold_for_pkup_dt is present</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Follow Up Date (related to Sale Hold)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Hold Reason (related to Sale Hold)</field-name>
+            <condition></condition>
+            <requiredCondition>lot:sale_hold_action_dt is present</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Select Tow Provider</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd='Y'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Scheduled Trip Date</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd='Y'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Trip Date</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd='Y'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Trip Distance</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd='Y'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Trip id</field-name>
+            <condition>lot:pickup_value:pkup_cd='Y'</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd='Y'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Payment Type</field-name>
+            <condition></condition>
+            <requiredCondition>advance_charge:total_chrgs &gt; 0</requiredCondition>
+            <readableCondition>advance_charge:total_chrgs value is present</readableCondition>
+        </field>
+        <field>
+            <field-name>id</field-name>
+            <condition></condition>
+            <requiredCondition>advance_charge:total_chrgs &gt; 0</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Reference/Check Number</field-name>
+            <condition></condition>
+            <requiredCondition>advance_charge:total_chrgs &gt; 0</requiredCondition>
+            <readableCondition>advance_charge:total_chrgs value is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Payment Amount</field-name>
+            <condition></condition>
+            <requiredCondition>advance_charge:total_chrgs &gt; 0</requiredCondition>
+            <readableCondition>advance_charge:total_chrgs value is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Payment Date</field-name>
+            <condition></condition>
+            <requiredCondition>advance_charge:total_chrgs &gt; 0</requiredCondition>
+            <readableCondition>advance_charge:total_chrgs value is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Total</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Total Charges</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Odometer / Hours Readable?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Engine</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Transmission?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Primary Damage</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Severity of Damage</field-name>
+            <condition>(lot:lot_type:lot_type_cd in [ 'V', 'R', 'U', 'K']) and (lot:prim_dmg_type:prim_dmg_type_cd in ['AO', 'BN', 'BE', 'BI', 'FR', 'RR', 'RO', 'SD', 'ST', 'TP'])</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Secondary Damage</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Severity of Damage</field-name>
+            <condition>(lot:lot_type:lot_type_cd in [ 'V', 'R', 'U', 'K']) and (lot:sec_dmg_type:sec_dmg_type_cd in ['AO', 'BN', 'BE', 'BI', 'FR', 'RR', 'RO', 'SD', 'ST', 'TP'])</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Run Condition</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc != 'Homeowners'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Airbags deployed?</field-name>
+            <condition>lot:lot_type:lot_type_group_desc = 'Vehicles'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc = 'Vehicles'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Row Location</field-name>
+            <condition>lot:pickup_value:pkup_cd != "O"</condition>
+            <requiredCondition>lot:pickup_value:pkup_cd != "O"</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Received by</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Additional Info</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Transfer Type</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Verify lot Identification Number</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>lot:lot_type:lot_type_group_desc != 'Homeowners'</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Document Type (related to Original Documents)</field-name>
+            <condition>(lot:ownrsp_trnsfr_type_cd is present) and (lot:ownrsp_trnsfr_type_cd == "A") and (lot:lot_type:lot_type_group_desc != 'Homeowners')</condition>
+            <requiredCondition>(lot:ownrsp_trnsfr_type_cd is present) and (lot:ownrsp_trnsfr_type_cd == "A") and (lot:lot_type:lot_type_group_desc != 'Homeowners')</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Country (related to Original Documents)</field-name>
+            <condition>(lot:ownrsp_trnsfr_type_cd is present) and (lot:ownrsp_trnsfr_type_cd == "A") and (lot:lot_type:lot_type_group_desc != 'Homeowners')</condition>
+            <requiredCondition>(lot:ownrsp_trnsfr_type_cd is present) and (lot:ownrsp_trnsfr_type_cd == "A") and (lot:lot_type:lot_type_group_desc != 'Homeowners')</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>State/Region/Province (related to Original Documents)</field-name>
+            <condition>(lot:ownrsp_trnsfr_type_cd is present) and (lot:ownrsp_trnsfr_type_cd == "A") and (lot:lot_type:lot_type_group_desc != 'Homeowners')</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Application Date (related to Original Documents)</field-name>
+            <condition>(lot:ownrsp_trnsfr_type_cd is present) and (lot:ownrsp_trnsfr_type_cd == "A") and (lot:lot_type:lot_type_group_desc != 'Homeowners')</condition>
+            <requiredCondition>(lot:ownrsp_trnsfr_type_cd is present) and (lot:ownrsp_trnsfr_type_cd == "A") and (lot:lot_type:lot_type_group_desc != 'Homeowners')</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Document Type (related to Sale Documents)</field-name>
+            <condition>lot:ownrsp_trnsfr_type_cd is present</condition>
+            <requiredCondition>lot:ownrsp_trnsfr_type_cd is present</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Country (related to Sale Documents)</field-name>
+            <condition>lot:ownrsp_trnsfr_type_cd is present</condition>
+            <requiredCondition>lot:ownrsp_trnsfr_type_cd is present</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>State/Region/Province (related to Sale Documents)</field-name>
+            <condition>lot:ownrsp_trnsfr_type_cd is present</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Registration Certificate Number</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition>((lot:lot_type:lot_type_group_desc != 'Homeowners') and ((lot:ownrsp_trnsfr_type_cd == 'A') or (lot:sale_doc_at_cprt_dt is present)))</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Sale Documents at Copart</field-name>
+            <condition>lot:ownrsp_trnsfr_type_cd is present</condition>
+            <requiredCondition>((lot:lot_type:lot_type_group_desc != 'Homeowners') and ((lot:ownrsp_trnsfr_type_cd == 'A') or (lot:ownrsp_trnsfr_type_cd == 'R')))</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Sale Documents given to Member</field-name>
+            <condition>lot:ownrsp_trnsfr_type_cd is present</condition>
+            <requiredCondition>lot:ownrsp_trnsfr_type_cd is present</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Original Odometer</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Original Odometer UOM</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Odometer Brand</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Documented Odometer</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Documented Odometer UOM</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Odometer Brand (related to Documented Odometer)</field-name>
+            <condition>lot:lot_type:lot_type_group_desc != 'Homeowners'</condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Calculated odometer brand</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Current Auction Date</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Item Number</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Virtual Bid Log</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>High Bid</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Number of reruns</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Lot Rerun Approved by</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Rerun Reason</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Number (related to Member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Email</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Fee</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Name</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Phone</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Value Added Tax ID</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Sale Confirmation Status</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Action Approved by</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Copart Handles customs?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Proof of Transport Received (member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>New Invoice Issued (member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax Registered(member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Paid?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Paid Date</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Destination Address (Related to Member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Fee Type (Related to Member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Amount ( Related to Member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Total Fees (Related to Member)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Value Added Tax Eligible?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Claim Number (Related to Seller Billing)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Date of Loss (Related to Seller Billing)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Fee Type ( Related to Seller)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Amount (Related to Seller)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>service_order:nm is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Seller Fee Type ( Related to Seller)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Amount (Related to Seller)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition>service_order:nm is present</readableCondition>
+        </field>
+        <field>
+            <field-name>Billing Date (Related to Seller)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Comments (Related to Seller Fee Type)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Total fees ( Related to Seller)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Total Advance Charges ( Related to Seller)</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Total Due From Seller</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Relist</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Sale Documents Given to member</field-name>
+            <condition></condition>
+            <requiredCondition>lot:member is present</requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Left Facility Date</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Seller Invoice Complete?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+        <field>
+            <field-name>Member Invoice Complete?</field-name>
+            <condition></condition>
+            <requiredCondition></requiredCondition>
+            <readableCondition></readableCondition>
+        </field>
+    </fields>
+</page>
